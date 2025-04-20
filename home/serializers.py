@@ -37,7 +37,7 @@ class MeatProductSerializer(serializers.ModelSerializer):
 class URLSerializer(serializers.Serializer):
     def to_representation(self, instance):
         dict =  super().to_representation(instance)
-        dict['image'] = f'http://127.0.0.1:8000{dict['image']}'
+        dict['image'] = f"http://127.0.0.1:8000{dict['image']}"
         return dict
     """"""
     
